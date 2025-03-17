@@ -6,8 +6,8 @@ import time
 # load hyper tuned model
 model = YOLO('batch2.pt')
 
-# Initialize Arduino
-arduino = serial.Serial('/dev/ttyUSB0', 9600)  # Linux/macOS (use 'COM3' for Windows)
+# Initialize Arduino/ESP32
+arduino = serial.Serial('COM3', 9600)  # Linux/macOS (use 'COM3' for Windows)
 time.sleep(2)  # Allow time for Arduino to initialize
 
 # establish and open webcam feed
